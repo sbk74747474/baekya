@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size1</title>
+    <link rel="stylesheet" href="sizestyles.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="src/C1.png" alt="Image 1">
+        <img src="src/C1_size.jpeg" alt="Image 2">
+        <img src="src/C1.png" alt="Image 1">
+        <img src="src/C1_size.jpeg" alt="Image 2">
+        <img src="src/C1.png" alt="Image 1">
+        <img src="src/C1_size.jpeg" alt="Image 2">
+    </div>
+    <div class="text-container" id="textContainer">
+        <h1>야구점퍼</h1>
+        <p class="price">Price: 43,000원 </p>
+        <p>Xs ~ 3XL</p>
+        <div class="button-container">
+            <button onclick="orderItem()">주문하기</button>
+            <button onclick="addToCart()">장바구니 담기</button>
+        </div>
+    </div>
+    <script>
+        function highlightText() {
+            document.querySelector('.price').classList.toggle('highlight');
+        }
+        function orderItem() {
+            alert("상품이 주문되었습니다.");
+        }
+        function addToCart() {
+            alert("상품이 장바구니에 추가되었습니다.");
+        }
+    </script>
+</body>
+</html>
