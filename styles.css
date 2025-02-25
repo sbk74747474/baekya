@@ -21,6 +21,14 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+/* 사이드바 */
+.sidebar {
+  width: 15%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
 .logo {
   height: 40px;
 }
@@ -48,14 +56,6 @@ body {
 .container {
   display: flex;
   flex: 1;
-}
-
-/* 사이드바 */
-.sidebar {
-  width: 200px;
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-right: 1px solid #ddd;
 }
 
 .menu h2 {
@@ -116,7 +116,7 @@ body {
 
 .product {
   background-color: #fff;
-  padding: 15px;
+  padding: 2%;
   text-align: center;
   border: 1px solid #ddd;
   flex: 1 1 250px; /* 최소 250px, 자동 확장 */
@@ -124,9 +124,16 @@ body {
 }
 
 .image-placeholder {
-  width: 100%;
+  width: 80%;
   height: 80%;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1; /* 기본적으로 이미지가 앞쪽 */
+  transition: z-index 0.3s ease-in-out; /* 부드럽게 변경 */
+}
+
+.sidebar-open .image-placeholder {
+  opacity: 0.25; /* 사이드바가 열리면 이미지가 반투명하게 */
 }
 
 /* 반응형 디자인 */
